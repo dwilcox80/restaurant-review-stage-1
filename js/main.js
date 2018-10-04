@@ -97,6 +97,9 @@ initMap = () => {
 
   }).addTo(newMap);
 
+  // let mapAtt = document.getElementById('map');
+  // mapAtt.setAttribute('role','Application');
+  // mapAtt.setAttribute('aria-label','Map');
   updateRestaurants();
 }
 
