@@ -83,7 +83,6 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        tabIndex: -1,
         center: [40.722216, -73.987501],
         zoom: 12,
         scrollWheelZoom: false,
@@ -178,8 +177,8 @@ createRestaurantHTML = (restaurant) => {
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
+  more.setAttribute('aria-label', `View Details for ${restaurant.name}`);
   more.href = DBHelper.urlForRestaurant(restaurant);
-  more.tabIndex = '3';
   li.append(more);
 
   return li
