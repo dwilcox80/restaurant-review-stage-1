@@ -32,6 +32,10 @@ initMap = () => {
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
+
+    let mapAtt = document.getElementById('map');
+    mapAtt.setAttribute('role','Application');
+    mapAtt.setAttribute('aria-label','Map');
   });
 }  
  
